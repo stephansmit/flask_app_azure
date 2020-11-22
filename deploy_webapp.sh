@@ -1,6 +1,6 @@
 #!/bin/bash
 APP_NAME=flaskPython
-APP_PLANE_NAME="${APP_NAME}plan"
+APP_PLAN_NAME="${APP_NAME}Plan"
 RESOURCE_GROUP=flaskPythonApp
 LOCATION=northeurope
 
