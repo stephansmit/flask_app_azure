@@ -12,17 +12,18 @@ jobs:
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
       
-    - name: Checkout
+    - name: Checkout repo
       uses: actions/checkout@v1
     
-#     - name: Azure CLI script
-#       uses: azure/CLI@v1
-#       with:
-#         azcliversion: 2.0.72
-#         inlineScript: |
-#           chmod +x $GITHUB_WORKSPACE/deploy_webapp.sh
-#           $GITHUB_WORKSPACE/deploy_webapp.sh
-
-    - uses: azure/webapps-deploy@v2
+    - name: Allocate the resources
+      uses: azure/CLI@v1
+      with:
+        azcliversion: 2.0.72
+        inlineScript: |
+          chmod +x $GITHUB_WORKSPACE/deploy_webapp.sh
+          $GITHUB_WORKSPACE/deploy_webapp.sh
+        
+    - name: Deploy the web app
+      uses: azure/webapps-deploy@v2
       with:
         app-name: 'flaskPythonStephanSmit'
