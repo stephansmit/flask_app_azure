@@ -15,13 +15,13 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v1
     
-    - name: Azure CLI script
-      uses: azure/CLI@v1
-      with:
-        azcliversion: 2.0.72
-        inlineScript: |
-          chmod +x $GITHUB_WORKSPACE/deploy_webapp.sh
-          $GITHUB_WORKSPACE/deploy_webapp.sh
+#     - name: Azure CLI script
+#       uses: azure/CLI@v1
+#       with:
+#         azcliversion: 2.0.72
+#         inlineScript: |
+#           chmod +x $GITHUB_WORKSPACE/deploy_webapp.sh
+#           $GITHUB_WORKSPACE/deploy_webapp.sh
 
     - uses: azure/webapps-deploy@v2
       with:
