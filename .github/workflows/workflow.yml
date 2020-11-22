@@ -22,3 +22,7 @@ jobs:
         inlineScript: |
           chmod +x $GITHUB_WORKSPACE/deploy_webapp.sh
           $GITHUB_WORKSPACE/deploy_webapp.sh
+
+    - uses: azure/webapps-deploy@v2
+      with:
+        app-name: 'hello'
