@@ -15,7 +15,8 @@ az appservice plan create \
         --resource-group $RESOURCE_GROUP \
         --name $APP_PLAN_NAME \
         --location $LOCATION \
-        --is-linux -–sku B1
+        --is-linux \
+        --sku B1
 
 # Create a Web App
 az webapp create \
